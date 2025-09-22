@@ -95,7 +95,7 @@ export default function LandingPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="min-h-screen bg-white overflow-hidden">
       <GSAPAnimatedSection animation="fadeUp">
         <section
           className="relative overflow-hidden bg-slate-900 text-white pt-20 pb-16 md:pt-24 md:pb-24"
@@ -177,8 +177,8 @@ export default function LandingPage() {
                 </GSAPAnimatedSection>
 
                 <GSAPAnimatedSection animation="scale" delay={1.3}>
-                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 sm:p-6 md:p-8 shadow-lg border border-gray-200/50 max-w-6xl mx-auto overflow-x-hidden">
-                    <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8 overflow-x-hidden">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 sm:p-6 md:p-8 shadow-lg border border-gray-200/50 max-w-6xl mx-auto overflow-hidden">
+                    <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8 overflow-hidden">
                       <div className="flex-1 md:flex-[2]">
                         <div className="relative mb-4">
                           <div className="relative group">
@@ -276,12 +276,12 @@ export default function LandingPage() {
       <ScrollMarquee />
 
       <GSAPAnimatedSection animation="fadeUp">
-        <section id="about" className="py-12 md:py-16 bg-white relative">
+        <section id="about" className="py-12 md:py-16 bg-white relative overflow-hidden">
           <GeometricBackground />
           <HexagonPattern />
           <SpiralPattern />
 
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 overflow-x-hidden">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 overflow-hidden">
             <GSAPAnimatedSection animation="fadeUp" className="text-center mb-8 md:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-3 md:mb-4 text-gray-900">
                 About Us
@@ -292,7 +292,7 @@ export default function LandingPage() {
               </p>
             </GSAPAnimatedSection>
 
-            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 mb-12 overflow-x-hidden">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 mb-12 overflow-hidden">
               <GSAPAnimatedSection animation="slideLeft">
                 <div className="space-y-6">
                   <h3 className="text-xl sm:text-2xl font-serif font-bold text-gray-900">Our Mission & Vision</h3>
@@ -332,7 +332,7 @@ export default function LandingPage() {
               </GSAPAnimatedSection>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12 overflow-x-hidden">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 overflow-hidden">
               <GSAPAnimatedSection animation="slideLeft">
                 <div className="space-y-6">
                   <h3 className="text-xl sm:text-2xl font-serif font-bold text-gray-900 mb-6">Our Core Values</h3>
@@ -409,12 +409,12 @@ export default function LandingPage() {
       </GSAPAnimatedSection>
 
       <GSAPAnimatedSection animation="fadeUp">
-        <section id="products" className="py-12 md:py-16 bg-gray-50 relative">
+        <section id="products" className="py-12 md:py-16 bg-gray-50 relative overflow-hidden">
           <FloatingShapes />
           <GridBackground />
           <MorphingBlobs />
 
-          <div className="max-w-6xl mx-auto px-6 relative z-10 overflow-x-hidden">
+          <div className="max-w-6xl mx-auto px-6 relative z-10 overflow-hidden">
             <GSAPAnimatedSection animation="fadeUp" className="text-center mb-8 md:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-3 md:mb-4 text-gray-900">
                 Our Products & Services
@@ -426,7 +426,7 @@ export default function LandingPage() {
 
             <GSAPAnimatedSection
               animation="stagger"
-              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-x-hidden"
+              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-hidden"
             >
               {[
                 {
@@ -473,7 +473,7 @@ export default function LandingPage() {
               ))}
             </GSAPAnimatedSection>
 
-            <GSAPAnimatedSection animation="fadeUp" className="text-center mt-8 overflow-x-hidden">
+            <GSAPAnimatedSection animation="fadeUp" className="text-center mt-8 overflow-hidden">
               <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
                 With this broad range, Hamad Co ensures that businesses around the world find everything they need under
                 one roof.
@@ -484,28 +484,28 @@ export default function LandingPage() {
       </GSAPAnimatedSection>
 
       <GSAPAnimatedSection animation="fadeUp">
-        <section id="global-presence" className="py-12 md:py-16 bg-white relative">
+        <section id="global-presence" className="py-12 md:py-16 bg-white relative overflow-hidden">
           <ParticleBackground />
           <NetworkDots />
           <HexagonPattern />
 
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 overflow-x-hidden">
-            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center overflow-x-hidden">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 overflow-hidden">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center overflow-hidden">
               <GSAPAnimatedSection animation="slideLeft">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-6 text-gray-900">
                   Our Global Presence
                 </h2>
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-justify mb-6 overflow-x-hidden">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-justify mb-6 overflow-hidden">
                   Headquartered in India, Hamad Co exports to markets worldwide. Our commitment to timely delivery,
                   strong logistics, and customer-first service has enabled us to build trusted partnerships across Asia,
                   the Middle East, Europe, and Africa.
                 </p>
-                <div className="grid grid-cols-2 gap-4 overflow-x-hidden">
-                  <div className="text-center p-4 bg-blue-50 rounded-lg overflow-x-hidden">
+                <div className="grid grid-cols-2 gap-4 overflow-hidden">
+                  <div className="text-center p-4 bg-blue-50 rounded-lg overflow-hidden">
                     <div className="text-2xl font-bold text-blue-600 mb-2">50+</div>
                     <div className="text-sm text-blue-800">Countries Served</div>
                   </div>
-                  <div className="text-center p-4 bg-green-50 rounded-lg overflow-x-hidden">
+                  <div className="text-center p-4 bg-green-50 rounded-lg overflow-hidden">
                     <div className="text-2xl font-bold text-green-600 mb-2">2018</div>
                     <div className="text-sm text-green-800">Established</div>
                   </div>
@@ -513,9 +513,9 @@ export default function LandingPage() {
               </GSAPAnimatedSection>
 
               <GSAPAnimatedSection animation="slideRight">
-                <div className="bg-gray-50 p-6 rounded-lg overflow-x-hidden">
+                <div className="bg-gray-50 p-6 rounded-lg overflow-hidden">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Why Choose Hamad Co?</h3>
-                  <div className="space-y-4 overflow-x-hidden">
+                  <div className="space-y-4 overflow-hidden">
                     {[
                       {
                         title: "Experienced leadership with global vision",
@@ -538,7 +538,7 @@ export default function LandingPage() {
                         desc: "",
                       },
                     ].map((reason, index) => (
-                      <div key={index} className="flex items-center gap-3 overflow-x-hidden">
+                      <div key={index} className="flex items-center gap-3 overflow-hidden">
                         <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                         <span className="text-gray-700">{reason.title}</span>
                       </div>
@@ -570,23 +570,23 @@ export default function LandingPage() {
       </GSAPAnimatedSection>
 
       <GSAPAnimatedSection animation="fadeUp">
-        <section id="references" className="py-12 md:py-16 bg-gray-50 relative">
+        <section id="references" className="py-12 md:py-16 bg-gray-50 relative overflow-hidden">
           <WaveBackground />
           <SpiralPattern />
 
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 overflow-x-hidden">
-            <GSAPAnimatedSection animation="fadeUp" className="text-center mb-8 md:mb-12 overflow-x-hidden">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 overflow-hidden">
+            <GSAPAnimatedSection animation="fadeUp" className="text-center mb-8 md:mb-12 overflow-hidden">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-3 md:mb-4 text-gray-900">
                 Our References
               </h2>
-              <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto text-justify overflow-x-hidden">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto text-justify overflow-hidden">
                 Trusted by organizations and distributors across the globe for reliable export services.
               </p>
             </GSAPAnimatedSection>
 
             <GSAPAnimatedSection
               animation="stagger"
-              className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 overflow-x-hidden"
+              className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 overflow-hidden"
             >
               {[
                 {
@@ -605,11 +605,11 @@ export default function LandingPage() {
                   testimonial: "Professional service and high-quality medical products consistently delivered.",
                 },
               ].map((reference, index) => (
-                <Card key={index} className="border shadow-sm hover:shadow-md transition-shadow overflow-x-hidden">
-                  <CardContent className="p-4 sm:p-5 overflow-x-hidden">
+                <Card key={index} className="border shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                  <CardContent className="p-4 sm:p-5 overflow-hidden">
                     <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">{reference.company}</h3>
                     <p className="text-xs text-gray-500 mb-2 sm:mb-3">{reference.location}</p>
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed text-justify overflow-x-hidden">
+                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed text-justify overflow-hidden">
                       "{reference.testimonial}"
                     </p>
                   </CardContent>
@@ -623,33 +623,33 @@ export default function LandingPage() {
       <HomeExtraSections />
 
       <GSAPAnimatedSection animation="fadeUp">
-        <section id="contact" className="py-20 bg-white relative">
+        <section id="contact" className="py-20 bg-white relative overflow-hidden">
           <GeometricBackground />
           <FloatingShapes />
           <MorphingBlobs />
           <NetworkDots />
 
-          <div className="max-w-6xl mx-auto px-6 relative z-10 overflow-x-hidden">
-            <div className="text-center mb-12 overflow-x-hidden">
+          <div className="max-w-6xl mx-auto px-6 relative z-10 overflow-hidden">
+            <div className="text-center mb-12 overflow-hidden">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Get in Touch with Hamadco</h2>
-              <p className="text-xl max-w-2xl mx-auto leading-relaxed text-gray-600 overflow-x-hidden">
+              <p className="text-xl max-w-2xl mx-auto leading-relaxed text-gray-600 overflow-hidden">
                 Ready to expand your business globally? Contact our export specialists for personalized solutions and
                 competitive pricing.
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 overflow-x-hidden">
+            <div className="grid lg:grid-cols-2 gap-12 overflow-hidden">
               {/* Contact Form */}
-              <Card className="shadow-lg overflow-x-hidden">
-                <CardContent className="p-6 overflow-x-hidden">
+              <Card className="shadow-lg overflow-hidden">
+                <CardContent className="p-6 overflow-hidden">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Send us a Message</h3>
-                  <p className="text-gray-600 mb-6 overflow-x-hidden">
+                  <p className="text-gray-600 mb-6 overflow-hidden">
                     Fill out the form below and we'll get back to you within 24 hours.
                   </p>
 
                   {submitStatus === "success" && (
-                    <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg overflow-x-hidden">
-                      <p className="text-green-800 font-medium overflow-x-hidden">
+                    <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg overflow-hidden">
+                      <p className="text-green-800 font-medium overflow-hidden">
                         Thank you for your inquiry! Your message has been formatted and sent to WhatsApp. We'll get back
                         to you within 24 hours.
                       </p>
@@ -657,16 +657,16 @@ export default function LandingPage() {
                   )}
 
                   {submitStatus === "error" && (
-                    <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg overflow-x-hidden">
-                      <p className="text-red-800 font-medium overflow-x-hidden">
+                    <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg overflow-hidden">
+                      <p className="text-red-800 font-medium overflow-hidden">
                         Sorry, there was an error sending your message. Please try again or contact us directly at
                         info@hamadco.in
                       </p>
                     </div>
                   )}
 
-                  <form onSubmit={handleSubmit} className="space-y-6 overflow-x-hidden">
-                    <div className="grid md:grid-cols-2 gap-4 overflow-x-hidden">
+                  <form onSubmit={handleSubmit} className="space-y-6 overflow-hidden">
+                    <div className="grid md:grid-cols-2 gap-4 overflow-hidden">
                       <div>
                         <Label htmlFor="name" className="text-gray-700 font-medium">
                           Full Name *
@@ -699,7 +699,7 @@ export default function LandingPage() {
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-4 overflow-x-hidden">
+                    <div className="grid md:grid-cols-2 gap-4 overflow-hidden">
                       <div>
                         <Label htmlFor="company" className="text-gray-700 font-medium">
                           Company Name
@@ -730,7 +730,7 @@ export default function LandingPage() {
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-4 overflow-x-hidden">
+                    <div className="grid md:grid-cols-2 gap-4 overflow-hidden">
                       <div>
                         <Label htmlFor="country" className="text-gray-700 font-medium">
                           Country *
@@ -769,7 +769,7 @@ export default function LandingPage() {
                       </div>
                     </div>
 
-                    <div overflow-x-hidden>
+                    <div className="overflow-hidden">
                       <Label htmlFor="message" className="text-gray-700 font-medium">
                         Message *
                       </Label>
@@ -814,12 +814,12 @@ export default function LandingPage() {
               </Card>
 
               {/* Contact Information Card */}
-              <Card className="shadow-lg overflow-x-hidden">
-                <CardContent className="p-6 overflow-x-hidden">
+              <Card className="shadow-lg overflow-hidden">
+                <CardContent className="p-6 overflow-hidden">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
-                  <div className="space-y-6 overflow-x-hidden">
-                    <div className="flex items-start gap-4 overflow-x-hidden">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-x-hidden">
+                  <div className="space-y-6 overflow-hidden">
+                    <div className="flex items-start gap-4 overflow-hidden">
+                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
                         <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path
                             strokeLinecap="round"
@@ -847,8 +847,8 @@ export default function LandingPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4 overflow-x-hidden">
-                      <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-x-hidden">
+                    <div className="flex items-start gap-4 overflow-hidden">
+                      <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
                         <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path
                             strokeLinecap="round"
@@ -868,8 +868,8 @@ export default function LandingPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4 overflow-x-hidden">
-                      <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-x-hidden">
+                    <div className="flex items-start gap-4 overflow-hidden">
+                      <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
                         <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path
                             strokeLinecap="round"
@@ -889,8 +889,8 @@ export default function LandingPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4 overflow-x-hidden">
-                      <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-x-hidden">
+                    <div className="flex items-start gap-4 overflow-hidden">
+                      <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
                         <svg className="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path
                             strokeLinecap="round"
@@ -911,22 +911,22 @@ export default function LandingPage() {
                     </div>
                   </div>
 
-                  <div className="mt-8 pt-6 border-t border-gray-200 overflow-x-hidden">
+                  <div className="mt-8 pt-6 border-t border-gray-200 overflow-hidden">
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Quick Facts</h4>
-                    <div className="space-y-3 overflow-x-hidden">
-                      <div className="flex items-center gap-3 overflow-x-hidden">
+                    <div className="space-y-3 overflow-hidden">
+                      <div className="flex items-center gap-3 overflow-hidden">
                         <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                         <span className="text-gray-700">20+ years of export experience</span>
                       </div>
-                      <div className="flex items-center gap-3 overflow-x-hidden">
+                      <div className="flex items-center gap-3 overflow-hidden">
                         <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                         <span className="text-gray-700">50+ countries worldwide</span>
                       </div>
-                      <div className="flex items-center gap-3 overflow-x-hidden">
+                      <div className="flex items-center gap-3 overflow-hidden">
                         <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
                         <span className="text-gray-700">Full regulatory compliance support</span>
                       </div>
-                      <div className="flex items-center gap-3 overflow-x-hidden">
+                      <div className="flex items-center gap-3 overflow-hidden">
                         <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
                         <span className="text-gray-700">24/7 customer support</span>
                       </div>
