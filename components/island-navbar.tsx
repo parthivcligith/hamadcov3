@@ -7,7 +7,9 @@ import Image from "next/image"
 
 const links = [{ href: "/", label: "Home" }]
 
-const exportLinks = [{ href: "/medical", label: "Pharmaceutical Exports" }]
+const exportLinks = [
+  { href: "/medical", label: "Pharmaceutical Exports" },
+]
 
 const getSectionLinks = (pathname: string) => {
   if (pathname === "/") {
@@ -22,7 +24,7 @@ const getSectionLinks = (pathname: string) => {
       { href: "/medical#services", label: "Services" },
       { href: "/medical#markets", label: "Markets" },
     ]
-  }
+  } 
   return []
 }
 
@@ -31,10 +33,6 @@ const getContactLink = (pathname: string) => {
     return "/medical#contact"
   }
   return "/#contact"
-}
-
-const redirectToWhatsApp = () => {
-  window.open("https://wa.me/918086890111", "_blank")
 }
 
 interface IslandNavbarProps {
@@ -103,7 +101,13 @@ export default function IslandNavbar({ showLogo = false }: IslandNavbarProps) {
             href="/"
             className="flex items-center gap-1 sm:gap-2 rounded-full px-1 sm:px-2 py-1 text-sm font-semibold text-gray-900 no-underline"
           >
-            <Image src="/images/hpharma.png" alt="Hamad Co" width={80} height={80} className="h-8 sm:h-12 w-auto" />
+            <Image
+              src="/images/hamad-logo-horizontal.png"
+              alt="Hamad Co"
+              width={120}
+              height={32}
+              className="h-4 sm:h-6 w-auto"
+            />
           </Link>
 
           {/* Desktop links */}
@@ -164,16 +168,17 @@ export default function IslandNavbar({ showLogo = false }: IslandNavbarProps) {
               </Link>
             ))}
 
-            
-
-            <button
-              onClick={redirectToWhatsApp}
-              className="relative rounded-full px-4 py-2 text-sm font-medium text-white no-underline transition-all duration-200 hover:opacity-90 cursor-pointer border-none"
-              style={{ backgroundColor: "#163764" }}
+            <Link
+              href={getContactLink(pathname)}
+              className="relative rounded-full px-4 py-2 text-sm font-medium text-white no-underline transition-all duration-200 hover:opacity-90"
+              style={{ backgroundColor: "#92301a" }}
             >
-              <span className="relative z-10">Get Quote</span>
-            </button>
+              <span className="relative z-10">Contact</span>
+            </Link>
           </nav>
+
+          {/* Desktop CTA */}
+          {/* Removed Get Quote button from desktop view */}
 
           <button
             aria-label="Open menu"
@@ -312,22 +317,6 @@ export default function IslandNavbar({ showLogo = false }: IslandNavbarProps) {
               >
                 Contact
               </Link>
-
-              <button
-                onClick={() => {
-                  setOpen(false)
-                  redirectToWhatsApp()
-                }}
-                className={`rounded-xl px-4 py-3 text-base font-medium text-white nohamad-logo-underline transition-all duration-200 mt-2 text-center cursor-pointer border-none w-full ${
-                  open ? "animate-slide-down-fade" : ""
-                }`}
-                style={{
-                  backgroundColor: "#163764",
-                  animationDelay: `${(links.length + exportLinks.length + sectionLinks.length + 1) * 50}ms`,
-                }}
-              >
-                Get Quote
-              </button>
             </nav>
           </div>
         </div>

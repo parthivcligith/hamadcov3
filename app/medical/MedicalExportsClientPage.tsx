@@ -355,7 +355,15 @@ export default function MedicalExportsClientPage() {
               <ArrowLeft className="mr-2 h-4 w-4" style={{ color: "#163764" }} />
               <span style={{ color: "#163764" }}>Back to home</span>
             </Link>
-            
+            <center>
+              <Image
+                    src="/images/hpharma.png"
+                    alt="Animated hands protecting medical cross symbol"
+                    width={120}
+                    height={60}
+                    className="md:w-60 md:h-20 ml-4 group-hover:scale-110 transition-transform duration-300"
+                  />
+            </center>
 
             <h1
             
@@ -367,6 +375,7 @@ export default function MedicalExportsClientPage() {
             >
               Trusted Medical Exporters from India to Africa
             </h1>
+
             <div className="mt-6 flex justify-center">
               <Image
                 src="/images/world-health-day.gif"
@@ -395,10 +404,7 @@ export default function MedicalExportsClientPage() {
                 marginBottom: "2rem",
               }}
             >
-              We are a merchant export company based in India, specializing in sourcing and exporting high‑quality
-              medical products including pharmaceutical supplies, medical equipment, and healthcare solutions to markets
-              across Africa. From compliance to logistics, HAMAD CO handles it all—so you can focus on what matters
-              most: delivering better health outcomes.
+              We are an India-based merchant export company specializing in high-quality medical products—pharmaceuticals, equipment, and healthcare solutions—for African markets.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-3 animate-fade-in-up animation-delay-600">
