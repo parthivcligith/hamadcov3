@@ -95,7 +95,7 @@ export default function LandingPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       <GSAPAnimatedSection animation="fadeUp">
         <section
           className="relative overflow-hidden bg-slate-900 text-white pt-20 pb-16 md:pt-24 md:pb-24"
@@ -177,8 +177,8 @@ export default function LandingPage() {
                 </GSAPAnimatedSection>
 
                 <GSAPAnimatedSection animation="scale" delay={1.3}>
-                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 sm:p-6 md:p-8 shadow-lg border border-gray-200/50 max-w-6xl mx-auto">
-                    <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 sm:p-6 md:p-8 shadow-lg border border-gray-200/50 max-w-6xl mx-auto overflow-x-hidden">
+                    <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8 overflow-x-hidden">
                       <div className="flex-1 md:flex-[2]">
                         <div className="relative mb-4">
                           <div className="relative group">
@@ -200,8 +200,7 @@ export default function LandingPage() {
                       </div>
 
                       <div className="flex-1 md:flex-1">
-                        {/* Removed pharmaceutical portfolio tile, kept only 2 tiles */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-4">
                           {/* Quality Standards Tile */}
                           <div className="p-4 rounded-lg" style={{ backgroundColor: "#f0f9ff" }}>
                             <h4 className="font-semibold text-black mb-2 text-sm">Quality Standards</h4>
@@ -282,7 +281,7 @@ export default function LandingPage() {
           <HexagonPattern />
           <SpiralPattern />
 
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 overflow-x-hidden">
             <GSAPAnimatedSection animation="fadeUp" className="text-center mb-8 md:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-3 md:mb-4 text-gray-900">
                 About Us
@@ -293,7 +292,7 @@ export default function LandingPage() {
               </p>
             </GSAPAnimatedSection>
 
-            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 mb-12">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 mb-12 overflow-x-hidden">
               <GSAPAnimatedSection animation="slideLeft">
                 <div className="space-y-6">
                   <h3 className="text-xl sm:text-2xl font-serif font-bold text-gray-900">Our Mission & Vision</h3>
@@ -333,52 +332,52 @@ export default function LandingPage() {
               </GSAPAnimatedSection>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 overflow-x-hidden">
               <GSAPAnimatedSection animation="slideLeft">
-                <h3 className="text-xl sm:text-2xl font-serif font-bold text-gray-900 mb-6">Our Core Values</h3>
-                <div className="space-y-4">
-                  {[
-                    {
-                      title: "Integrity",
-                      desc: "We believe in honesty and transparency in every transaction.",
-                      color: "blue",
-                    },
-                    {
-                      title: "Quality",
-                      desc: "Every product we deliver meets strict international standards.",
-                      color: "green",
-                    },
-                    {
-                      title: "Customer Focus",
-                      desc: "We put our clients at the center of everything we do.",
-                      color: "purple",
-                    },
-                    {
-                      title: "Innovation",
-                      desc: "Continuously evolving to meet the needs of a changing world.",
-                      color: "orange",
-                    },
-                    {
-                      title: "Sustainability",
-                      desc: "Building a future-friendly business with responsibility.",
-                      color: "teal",
-                    },
-                  ].map((value, index) => (
-                    <div key={index} className="flex items-start gap-4 p-4 bg-white rounded-lg border shadow-sm">
-                      <div className={`w-3 h-3 bg-${value.color}-600 rounded-full mt-2 flex-shrink-0`}></div>
-                      <div>
-                        <h4 className="font-semibold text-gray-900 text-sm sm:text-base">{value.title}</h4>
-                        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{value.desc}</p>
+                <div className="space-y-6">
+                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-gray-900 mb-6">Our Core Values</h3>
+                  <div className="space-y-4">
+                    {[
+                      {
+                        title: "Integrity",
+                        desc: "We believe in honesty and transparency in every transaction.",
+                        color: "blue",
+                      },
+                      {
+                        title: "Quality",
+                        desc: "Every product we deliver meets strict international standards.",
+                        color: "green",
+                      },
+                      {
+                        title: "Customer Focus",
+                        desc: "We put our clients at the center of everything we do.",
+                        color: "purple",
+                      },
+                      {
+                        title: "Innovation",
+                        desc: "Continuously evolving to meet the needs of a changing world.",
+                        color: "orange",
+                      },
+                      {
+                        title: "Sustainability",
+                        desc: "Building a future-friendly business with responsibility.",
+                        color: "teal",
+                      },
+                    ].map((value, index) => (
+                      <div key={index} className="flex items-start gap-4 p-4 bg-white rounded-lg border shadow-sm">
+                        <div className={`w-3 h-3 bg-${value.color}-600 rounded-full mt-2 flex-shrink-0`}></div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-sm sm:text-base">{value.title}</h4>
+                          <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{value.desc}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </GSAPAnimatedSection>
 
               <GSAPAnimatedSection animation="slideRight">
                 <div className="space-y-8">
-                  
-
                   <Card className="shadow-lg">
                     <CardContent className="p-6">
                       <h3 className="text-xl font-bold text-gray-900 mb-4">Why Choose Hamad Co?</h3>
@@ -415,7 +414,7 @@ export default function LandingPage() {
           <GridBackground />
           <MorphingBlobs />
 
-          <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <div className="max-w-6xl mx-auto px-6 relative z-10 overflow-x-hidden">
             <GSAPAnimatedSection animation="fadeUp" className="text-center mb-8 md:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-3 md:mb-4 text-gray-900">
                 Our Products & Services
@@ -425,7 +424,10 @@ export default function LandingPage() {
               </p>
             </GSAPAnimatedSection>
 
-            <GSAPAnimatedSection animation="stagger" className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <GSAPAnimatedSection
+              animation="stagger"
+              className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-x-hidden"
+            >
               {[
                 {
                   title: "Marine Spare Parts",
@@ -471,7 +473,7 @@ export default function LandingPage() {
               ))}
             </GSAPAnimatedSection>
 
-            <GSAPAnimatedSection animation="fadeUp" className="text-center mt-8">
+            <GSAPAnimatedSection animation="fadeUp" className="text-center mt-8 overflow-x-hidden">
               <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
                 With this broad range, Hamad Co ensures that businesses around the world find everything they need under
                 one roof.
@@ -487,23 +489,23 @@ export default function LandingPage() {
           <NetworkDots />
           <HexagonPattern />
 
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 overflow-x-hidden">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center overflow-x-hidden">
               <GSAPAnimatedSection animation="slideLeft">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-6 text-gray-900">
                   Our Global Presence
                 </h2>
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-justify mb-6">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-justify mb-6 overflow-x-hidden">
                   Headquartered in India, Hamad Co exports to markets worldwide. Our commitment to timely delivery,
                   strong logistics, and customer-first service has enabled us to build trusted partnerships across Asia,
                   the Middle East, Europe, and Africa.
                 </p>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-4 bg-blue-50 rounded-lg">
+                <div className="grid grid-cols-2 gap-4 overflow-x-hidden">
+                  <div className="text-center p-4 bg-blue-50 rounded-lg overflow-x-hidden">
                     <div className="text-2xl font-bold text-blue-600 mb-2">50+</div>
                     <div className="text-sm text-blue-800">Countries Served</div>
                   </div>
-                  <div className="text-center p-4 bg-green-50 rounded-lg">
+                  <div className="text-center p-4 bg-green-50 rounded-lg overflow-x-hidden">
                     <div className="text-2xl font-bold text-green-600 mb-2">2018</div>
                     <div className="text-sm text-green-800">Established</div>
                   </div>
@@ -511,19 +513,34 @@ export default function LandingPage() {
               </GSAPAnimatedSection>
 
               <GSAPAnimatedSection animation="slideRight">
-                <div className="bg-gray-50 p-6 rounded-lg">
+                <div className="bg-gray-50 p-6 rounded-lg overflow-x-hidden">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Why Choose Hamad Co?</h3>
-                  <div className="space-y-4">
+                  <div className="space-y-4 overflow-x-hidden">
                     {[
-                      "Experienced leadership with global vision",
-                      "Wide range of industries and products",
-                      "Trusted by clients across multiple continents",
-                      "Strong export capabilities with reliable logistics",
-                      "Commitment to customer satisfaction",
+                      {
+                        title: "Experienced leadership with global vision",
+                        desc: "",
+                      },
+                      {
+                        title: "Wide range of industries and products",
+                        desc: "",
+                      },
+                      {
+                        title: "Trusted by clients across multiple continents",
+                        desc: "",
+                      },
+                      {
+                        title: "Strong export capabilities with reliable logistics",
+                        desc: "",
+                      },
+                      {
+                        title: "Commitment to customer satisfaction",
+                        desc: "",
+                      },
                     ].map((reason, index) => (
-                      <div key={index} className="flex items-center gap-3">
+                      <div key={index} className="flex items-center gap-3 overflow-x-hidden">
                         <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                        <span className="text-gray-700">{reason}</span>
+                        <span className="text-gray-700">{reason.title}</span>
                       </div>
                     ))}
                   </div>
@@ -557,17 +574,20 @@ export default function LandingPage() {
           <WaveBackground />
           <SpiralPattern />
 
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-            <GSAPAnimatedSection animation="fadeUp" className="text-center mb-8 md:mb-12">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 overflow-x-hidden">
+            <GSAPAnimatedSection animation="fadeUp" className="text-center mb-8 md:mb-12 overflow-x-hidden">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-3 md:mb-4 text-gray-900">
                 Our References
               </h2>
-              <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto text-justify">
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto text-justify overflow-x-hidden">
                 Trusted by organizations and distributors across the globe for reliable export services.
               </p>
             </GSAPAnimatedSection>
 
-            <GSAPAnimatedSection animation="stagger" className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            <GSAPAnimatedSection
+              animation="stagger"
+              className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 overflow-x-hidden"
+            >
               {[
                 {
                   company: "African Medical Distributors Ltd.",
@@ -585,11 +605,11 @@ export default function LandingPage() {
                   testimonial: "Professional service and high-quality medical products consistently delivered.",
                 },
               ].map((reference, index) => (
-                <Card key={index} className="border shadow-sm hover:shadow-md transition-shadow">
-                  <CardContent className="p-4 sm:p-5">
+                <Card key={index} className="border shadow-sm hover:shadow-md transition-shadow overflow-x-hidden">
+                  <CardContent className="p-4 sm:p-5 overflow-x-hidden">
                     <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">{reference.company}</h3>
                     <p className="text-xs text-gray-500 mb-2 sm:mb-3">{reference.location}</p>
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed text-justify">
+                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed text-justify overflow-x-hidden">
                       "{reference.testimonial}"
                     </p>
                   </CardContent>
@@ -609,27 +629,27 @@ export default function LandingPage() {
           <MorphingBlobs />
           <NetworkDots />
 
-          <div className="max-w-6xl mx-auto px-6 relative z-10">
-            <div className="text-center mb-12">
+          <div className="max-w-6xl mx-auto px-6 relative z-10 overflow-x-hidden">
+            <div className="text-center mb-12 overflow-x-hidden">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Get in Touch with Hamadco</h2>
-              <p className="text-xl max-w-2xl mx-auto leading-relaxed text-gray-600">
+              <p className="text-xl max-w-2xl mx-auto leading-relaxed text-gray-600 overflow-x-hidden">
                 Ready to expand your business globally? Contact our export specialists for personalized solutions and
                 competitive pricing.
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-12 overflow-x-hidden">
               {/* Contact Form */}
-              <Card className="shadow-lg">
-                <CardContent className="p-6">
+              <Card className="shadow-lg overflow-x-hidden">
+                <CardContent className="p-6 overflow-x-hidden">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Send us a Message</h3>
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-gray-600 mb-6 overflow-x-hidden">
                     Fill out the form below and we'll get back to you within 24 hours.
                   </p>
 
                   {submitStatus === "success" && (
-                    <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                      <p className="text-green-800 font-medium">
+                    <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg overflow-x-hidden">
+                      <p className="text-green-800 font-medium overflow-x-hidden">
                         Thank you for your inquiry! Your message has been formatted and sent to WhatsApp. We'll get back
                         to you within 24 hours.
                       </p>
@@ -637,16 +657,16 @@ export default function LandingPage() {
                   )}
 
                   {submitStatus === "error" && (
-                    <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-                      <p className="text-red-800 font-medium">
+                    <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg overflow-x-hidden">
+                      <p className="text-red-800 font-medium overflow-x-hidden">
                         Sorry, there was an error sending your message. Please try again or contact us directly at
                         info@hamadco.in
                       </p>
                     </div>
                   )}
 
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-4">
+                  <form onSubmit={handleSubmit} className="space-y-6 overflow-x-hidden">
+                    <div className="grid md:grid-cols-2 gap-4 overflow-x-hidden">
                       <div>
                         <Label htmlFor="name" className="text-gray-700 font-medium">
                           Full Name *
@@ -679,7 +699,7 @@ export default function LandingPage() {
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid md:grid-cols-2 gap-4 overflow-x-hidden">
                       <div>
                         <Label htmlFor="company" className="text-gray-700 font-medium">
                           Company Name
@@ -710,7 +730,7 @@ export default function LandingPage() {
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid md:grid-cols-2 gap-4 overflow-x-hidden">
                       <div>
                         <Label htmlFor="country" className="text-gray-700 font-medium">
                           Country *
@@ -749,7 +769,7 @@ export default function LandingPage() {
                       </div>
                     </div>
 
-                    <div>
+                    <div overflow-x-hidden>
                       <Label htmlFor="message" className="text-gray-700 font-medium">
                         Message *
                       </Label>
@@ -794,12 +814,12 @@ export default function LandingPage() {
               </Card>
 
               {/* Contact Information Card */}
-              <Card className="shadow-lg">
-                <CardContent className="p-6">
+              <Card className="shadow-lg overflow-x-hidden">
+                <CardContent className="p-6 overflow-x-hidden">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
-                  <div className="space-y-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="space-y-6 overflow-x-hidden">
+                    <div className="flex items-start gap-4 overflow-x-hidden">
+                      <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-x-hidden">
                         <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path
                             strokeLinecap="round"
@@ -827,8 +847,8 @@ export default function LandingPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="flex items-start gap-4 overflow-x-hidden">
+                      <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-x-hidden">
                         <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path
                             strokeLinecap="round"
@@ -848,8 +868,8 @@ export default function LandingPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="flex items-start gap-4 overflow-x-hidden">
+                      <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-x-hidden">
                         <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path
                             strokeLinecap="round"
@@ -869,8 +889,8 @@ export default function LandingPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="flex items-start gap-4 overflow-x-hidden">
+                      <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0 overflow-x-hidden">
                         <svg className="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path
                             strokeLinecap="round"
@@ -891,22 +911,22 @@ export default function LandingPage() {
                     </div>
                   </div>
 
-                  <div className="mt-8 pt-6 border-t border-gray-200">
+                  <div className="mt-8 pt-6 border-t border-gray-200 overflow-x-hidden">
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Quick Facts</h4>
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-3">
+                    <div className="space-y-3 overflow-x-hidden">
+                      <div className="flex items-center gap-3 overflow-x-hidden">
                         <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                         <span className="text-gray-700">20+ years of export experience</span>
                       </div>
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-3 overflow-x-hidden">
                         <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                         <span className="text-gray-700">50+ countries worldwide</span>
                       </div>
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-3 overflow-x-hidden">
                         <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
                         <span className="text-gray-700">Full regulatory compliance support</span>
                       </div>
-                      <div className="flex items-center gap-3">
+                      <div className="flex items-center gap-3 overflow-x-hidden">
                         <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
                         <span className="text-gray-700">24/7 customer support</span>
                       </div>
