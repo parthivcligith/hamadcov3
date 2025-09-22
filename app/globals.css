@@ -1,0 +1,412 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color tokens to match Hamadco's corporate branding with deep navy blue, white, and gold */
+  --background: oklch(1 0 0); /* White */
+  --foreground: oklch(0.145 0 0); /* Deep Navy Blue */
+  --card: oklch(1 0 0); /* Light Grey */
+  --card-foreground: oklch(0.145 0 0); /* Deep Navy Blue */
+  --popover: oklch(1 0 0); /* White */
+  --popover-foreground: oklch(0.145 0 0); /* Deep Navy Blue */
+  --primary: #92301a; /* Brand color - dark reddish brown */
+  --primary-foreground: oklch(0.985 0 0); /* White */
+  --secondary: oklch(0.97 0 0); /* Gold */
+  --secondary-foreground: oklch(0.205 0 0); /* Deep Navy Blue */
+  --muted: oklch(0.97 0 0); /* Light Grey */
+  --muted-foreground: oklch(0.556 0 0); /* Deep Navy Blue */
+  --accent: oklch(0.97 0 0); /* Gold */
+  --accent-foreground: oklch(0.205 0 0); /* Deep Navy Blue */
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0); /* Light border */
+  --input: oklch(0.922 0 0); /* Light Grey */
+  --ring: oklch(0.708 0 0); /* Deep Navy Blue with opacity */
+  --chart-1: oklch(0.646 0.222 41.116); /* Deep Navy Blue */
+  --chart-2: oklch(0.6 0.118 184.704); /* Gold */
+  --chart-3: oklch(0.398 0.07 227.392); /* Light Grey */
+  --chart-4: oklch(0.828 0.189 84.429); /* Deep Navy Blue */
+  --chart-5: oklch(0.769 0.188 70.08); /* Gold */
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0); /* Light Grey */
+  --sidebar-foreground: oklch(0.145 0 0); /* Deep Navy Blue */
+  --sidebar-primary: oklch(0.205 0 0); /* Deep Navy Blue */
+  --sidebar-primary-foreground: oklch(0.985 0 0); /* White */
+  --sidebar-accent: oklch(0.97 0 0); /* Gold */
+  --sidebar-accent-foreground: oklch(0.205 0 0); /* Deep Navy Blue */
+  --sidebar-border: oklch(0.922 0 0); /* Light border */
+  --sidebar-ring: oklch(0.708 0 0); /* Deep Navy Blue with opacity */
+}
+
+.dark {
+  /* Updated dark mode tokens to maintain corporate branding consistency */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0); /* Gold for dark mode primary */
+  --primary-foreground: oklch(0.205 0 0); /* Deep Navy Blue */
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0); /* Gold */
+  --accent-foreground: oklch(0.985 0 0); /* Deep Navy Blue */
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376); /* Gold */
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0); /* Deep Navy Blue */
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376); /* Gold */
+  --sidebar-primary-foreground: oklch(0.985 0 0); /* Deep Navy Blue */
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  /* Updated font variables to use Inter instead of Geist */
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-serif), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Updated animation keyframes to maintain full opacity for contrast compliance */
+  @keyframes fade-up {
+    0% {
+      opacity: 1; /* Changed from 0.1 to 1 to prevent contrast issues */
+      transform: translateY(12px) scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  .animate-fade-up {
+    animation: fade-up .7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    /* Removed initial low opacity to prevent contrast issues */
+    opacity: 1;
+  }
+
+  @keyframes slow-pan-zoom {
+    0% {
+      transform: scale(1) translate3d(0, 0, 0);
+    }
+    50% {
+      transform: scale(1.05) translate3d(1%, -1%, 0);
+    }
+    100% {
+      transform: scale(1) translate3d(0, 0, 0);
+    }
+  }
+  .animate-slow-pan-zoom {
+    animation: slow-pan-zoom 24s ease-in-out infinite;
+  }
+
+  @keyframes slide-down-fade {
+    0% {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-slide-down-fade {
+    animation: slide-down-fade 0.3s ease-out both;
+  }
+
+  /* Added new animation keyframes for background elements */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(180deg);
+    }
+  }
+  .animate-float {
+    animation: float 20s ease-in-out infinite;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-25%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .animate-wave {
+    animation: wave 25s ease-in-out infinite;
+  }
+
+  @keyframes wave-reverse {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(25%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .animate-wave-reverse {
+    animation: wave-reverse 30s ease-in-out infinite;
+  }
+
+  /* Added new unique animation keyframes for morphing blobs, network patterns, and spiral */
+  @keyframes morph {
+    0%,
+    100% {
+      d: path("M40,80 Q80,20 120,80 Q160,120 120,160 Q80,180 40,160 Q0,120 40,80 Z");
+    }
+    25% {
+      d: path("M60,60 Q100,40 140,80 Q180,100 140,140 Q100,160 60,140 Q20,100 60,60 Z");
+    }
+    50% {
+      d: path("M50,70 Q90,30 130,70 Q170,110 130,150 Q90,170 50,150 Q10,110 50,70 Z");
+    }
+    75% {
+      d: path("M45,85 Q85,25 125,85 Q165,125 125,165 Q85,185 45,165 Q5,125 45,85 Z");
+    }
+  }
+  .animate-morph {
+    animation: morph 20s ease-in-out infinite;
+  }
+
+  @keyframes morph-reverse {
+    0%,
+    100% {
+      d: path("M60,40 Q140,60 160,120 Q140,180 60,160 Q20,120 60,40 Z");
+    }
+    33% {
+      d: path("M80,50 Q120,80 150,130 Q120,170 80,150 Q40,130 80,50 Z");
+    }
+    66% {
+      d: path("M70,45 Q130,70 155,125 Q130,175 70,155 Q30,125 70,45 Z");
+    }
+  }
+  .animate-morph-reverse {
+    animation: morph-reverse 25s ease-in-out infinite;
+  }
+
+  /* Added smooth dropdown hover animations for mobile and desktop */
+  @keyframes dropdown-expand {
+    0% {
+      opacity: 0;
+      max-height: 0;
+      transform: translateY(-4px);
+    }
+    100% {
+      opacity: 1;
+      max-height: 300px;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes dropdown-collapse {
+    0% {
+      opacity: 1;
+      max-height: 300px;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      max-height: 0;
+      transform: translateY(-4px);
+    }
+  }
+
+  .dropdown-hover-enter {
+    animation: dropdown-expand 0.3s ease-out forwards;
+  }
+
+  .dropdown-hover-exit {
+    animation: dropdown-collapse 0.3s ease-out forwards;
+  }
+
+  /* Stagger helper: use inline style --delay: 0ms, 50ms, 100ms, ... */
+  .stagger-fade {
+    opacity: 1; /* Changed from 0.1 to 1 to prevent contrast issues during animations */
+    animation: fade-up .5s ease-out forwards;
+    animation-delay: var(--delay, 0ms);
+  }
+}
+
+@layer components {
+  /* Updated button styles with proper contrast ratios for accessibility */
+  .hero-primary-btn {
+    background-color: #92301a !important;
+    color: #ffffff !important;
+    border: 2px solid #92301a !important;
+    font-weight: 500 !important;
+    padding: 0.5rem 1.5rem !important;
+    border-radius: 0.375rem !important;
+    transition: all 0.2s ease-in-out !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .hero-primary-btn:hover {
+    background-color: #7a2817 !important;
+    border-color: #7a2817 !important;
+    color: #ffffff !important;
+  }
+
+  .hero-secondary-btn {
+    background-color: #ffffff !important;
+    color: #92301a !important;
+    border: 2px solid #92301a !important;
+    font-weight: 500 !important;
+    padding: 0.5rem 1.5rem !important;
+    border-radius: 0.375rem !important;
+    transition: all 0.2s ease-in-out !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .hero-secondary-btn:hover {
+    background-color: #f8fafc !important;
+    color: #92301a !important;
+    border-color: #92301a !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-1px) !important;
+  }
+
+  .white-bg-button {
+    background-color: #ffffff !important;
+    color: #92301a !important;
+    border: 2px solid #92301a !important;
+    font-weight: 500 !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 0.75rem !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .white-bg-button:hover {
+    background-color: #f8fafc !important;
+    color: #92301a !important;
+    border-color: #92301a !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-1px) !important;
+  }
+
+  .btn-primary-dark {
+    background-color: #92301a !important;
+    color: #ffffff !important;
+    border: 2px solid #92301a !important;
+    font-weight: 500 !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 0.375rem !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s ease-in-out !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .btn-primary-dark:hover {
+    background-color: #7a2817 !important;
+    border-color: #7a2817 !important;
+    color: #ffffff !important;
+  }
+
+  .btn-card-primary {
+    background-color: #92301a !important;
+    color: #ffffff !important;
+    border: 2px solid #92301a !important;
+    font-weight: 600 !important;
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 0.375rem !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    transition: all 0.3s ease !important;
+    font-size: 0.75rem !important;
+  }
+
+  .btn-card-primary:hover {
+    background-color: #7a2817 !important;
+    border-color: #7a2817 !important;
+    color: #ffffff !important;
+  }
+}
