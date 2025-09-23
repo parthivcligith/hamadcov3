@@ -328,7 +328,7 @@ export default function MedicalExportsClientPage() {
           <div
             className="absolute inset-0"
             style={{
-              background: "linear-gradient(135deg, rgba(248, 250, 252, 0.7) 0%, rgba(248, 250, 252, 0.5) 100%)",
+              background: "linear-gradient(135deg, rgba(248, 250, 252, 0.7) 0%, rgba(231, 243, 255, 0.5) 100%)",
             }}
           />
         </div>
@@ -344,17 +344,7 @@ export default function MedicalExportsClientPage() {
               boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
             }}
           >
-            <Link
-              href="/"
-              className="inline-flex items-center mb-6 transition-colors duration-300 hover:scale-105 transform"
-              style={{
-                color: "#163764",
-                textDecoration: "none",
-              }}
-            >
-              
-              
-            </Link>
+
             <center>
               <Image
                     src="/images/hpharma.png"
@@ -415,12 +405,7 @@ export default function MedicalExportsClientPage() {
                 Request catalog
               </button>
 
-              <button
-                onClick={() => window.open("https://wa.me/918086890111", "_blank")}
-                className="rounded-full px-6 py-3 font-medium transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl bg-transparent text-[#163764] border-2 border-[#163764] cursor-pointer hover:bg-[#163764] hover:text-white"
-              >
-                Talk to expert
-              </button>
+              
             </div>
           </div>
         </div>
@@ -459,6 +444,26 @@ export default function MedicalExportsClientPage() {
           <span className="text-white mx-8 flex items-center gap-2">
             <Shield className="h-4 w-4 animate-pulse" />
             100% Compliance Guaranteed
+          </span>
+          <span className="text-white mx-8 flex items-center gap-2">
+            <Pill className="h-4 w-4 animate-pulse" />
+            WHO-GMP Certified Products
+          </span>
+          <span className="text-white mx-8 flex items-center gap-2">
+            <ShieldCheck className="h-4 w-4 animate-pulse" />
+            CDSCO Approved Manufacturers
+          </span>
+          <span className="text-white mx-8 flex items-center gap-2">
+            <Ship className="h-4 w-4 animate-pulse" />
+            Global Shipping Network
+          </span>
+          <span className="text-white mx-8 flex items-center gap-2">
+            <Heart className="h-4 w-4 animate-pulse" />
+            Quality Healthcare Solutions
+          </span>
+          <span className="text-white mx-8 flex items-center gap-2">
+            <Globe2 className="h-4 w-4 animate-pulse" />
+            Serving 15+ African Countries
           </span>
         </div>
       </div>
