@@ -317,12 +317,12 @@ export default function MedicalExportsClientPage() {
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: `url('/images/stethoscope-medical-desk.jpg')`,
+              backgroundImage: `url('/images/3d-coronavirus-vaccine.jpg')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              opacity: 0.4,
-              filter: "blur(2px)",
+              opacity: 0.7,
+              filter: "blur(3px)",
             }}
           />
           <div
@@ -352,8 +352,8 @@ export default function MedicalExportsClientPage() {
                 textDecoration: "none",
               }}
             >
-              <ArrowLeft className="mr-2 h-4 w-4" style={{ color: "#163764" }} />
-              <span style={{ color: "#163764" }}>Back to home</span>
+              
+              
             </Link>
             <center>
               <Image
@@ -361,7 +361,7 @@ export default function MedicalExportsClientPage() {
                     alt="Animated hands protecting medical cross symbol"
                     width={120}
                     height={60}
-                    className="md:w-60 md:h-20 ml-4 group-hover:scale-110 transition-transform duration-300"
+                    className="md:w-60 md:h-18 ml-4 group-hover:scale-110 transition-transform duration-300"
                   />
             </center>
 
@@ -373,7 +373,7 @@ export default function MedicalExportsClientPage() {
                 marginBottom: "1rem",
               }}
             >
-              Trusted Medical Exporters from India to Africa
+              India’s Trusted Medical Exporters to Africa
             </h1>
 
             <div className="mt-6 flex justify-center">
@@ -404,7 +404,7 @@ export default function MedicalExportsClientPage() {
                 marginBottom: "2rem",
               }}
             >
-              We are an India-based merchant export company specializing in high-quality medical products—pharmaceuticals, equipment, and healthcare solutions—for African markets.
+              We are an India-based merchant export company specializing in high-quality medical pharmaceuticals products, equipment, and healthcare solutions for African markets.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-3 animate-fade-in-up animation-delay-600">
@@ -526,13 +526,15 @@ export default function MedicalExportsClientPage() {
       <section id="products" className="py-16 md:py-24 relative overflow-hidden">
         <FloatingShapes variant="lines" />
 
-        {/* ... existing products content ... */}
         <div className="mx-auto max-w-6xl px-6 relative z-10">
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-serif font-light text-gray-900">Medical Export Products</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-light text-gray-900">
+              Medical Export Products
+            </h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-justify leading-relaxed">
-              All medical products meet international healthcare standards and are sourced from licensed Indian
-              manufacturers with required medical certifications and regulatory approvals.
+              All medical products meet international healthcare standards and are
+              sourced from licensed Indian manufacturers with required medical
+              certifications and regulatory approvals.
             </p>
             <div className="mt-6 flex justify-center">
               <Image
@@ -567,7 +569,10 @@ export default function MedicalExportsClientPage() {
                   <CardContent className="text-sm text-gray-600">
                     <ul className="list-disc pl-5 space-y-1">
                       {cat.examples.map((ex) => (
-                        <li key={ex} className="group-hover:text-gray-700 transition-colors duration-300">
+                        <li
+                          key={ex}
+                          className="group-hover:text-gray-700 transition-colors duration-300"
+                        >
                           {ex}
                         </li>
                       ))}
@@ -607,6 +612,16 @@ export default function MedicalExportsClientPage() {
         <div className="mx-auto max-w-6xl px-6 relative z-10">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-serif font-light text-gray-900">Medical Export Services</h2>
+            <center>
+              <Image
+                src="/images/Animated Africa continent.gif"
+                alt="Animated tablet and medicine illustration"
+                width={80}
+                height={80}
+                className="md:w-70 md:h-70 ml-4 group-hover:scale-110 transition-transform duration-300"
+              />
+            </center>
+            
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-justify leading-relaxed">
               We handle the entire medical export workflow—from sourcing to delivery—while maintaining full compliance
               with both Indian and African regulatory requirements for healthcare products.
@@ -746,35 +761,34 @@ export default function MedicalExportsClientPage() {
         </div>
       </section>
 
-      {/* Resources */}
-      <section id="resources" className="py-16 bg-white relative overflow-hidden">
-        <FloatingShapes variant="lines" />
-
-        <div className="mx-auto max-w-6xl px-6 relative z-10">
-          <div className="flex items-center justify-between">
-            <h2 className="text-2xl md:text-3xl font-serif font-light text-gray-900">Medical Export Resources</h2>
-            <Link
-              href="#"
-              className="text-[#163764] hover:underline text-sm hover:text-[#163764]/80 transition-colors duration-300"
-            >
-              View all
-            </Link>
-          </div>
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
-            {articles.map((a, index) => (
-              <Card
-                key={a}
-                className="rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardContent className="p-5 flex items-start gap-3">
-                  <BookOpen className="h-5 w-5 text-[#163764] mt-0.5 group-hover:scale-110 transition-transform duration-300" />
-                  <p className="text-gray-800 text-justify leading-relaxed group-hover:text-[#163764] transition-colors duration-300">
-                    {a}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+      {/* ===== Photo Gallery Section ===== */}
+      <section className="py-16 bg-gray-100" id="gallery">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="overflow-hidden rounded-2xl shadow-lg">
+              <img
+                src="/images/medicalexport.jpg"
+                alt="Medical export operations"
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="overflow-hidden rounded-2xl shadow-lg">
+              <img
+                src="/images/bf.jpg"
+                alt="Pharmaceutical supplies"
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="overflow-hidden rounded-2xl shadow-lg">
+              <img
+                src="/images/gff.jpg"
+                alt="Healthcare equipment"
+                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            
+            
           </div>
         </div>
       </section>

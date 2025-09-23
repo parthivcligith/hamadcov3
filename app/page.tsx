@@ -107,7 +107,7 @@ export default function LandingPage() {
           <div className="absolute inset-0 bg-slate-900/40" />
 
           <img
-            src="/images/logistics-hero-bg.jpg"
+            src="/images/low-angle-greyscale-shot-airplane-flying-high-rise-buildings.jpg"
             alt="Global logistics and transportation network with futuristic holograms"
             className="absolute inset-0 w-full h-full object-cover object-center opacity-70 blur-sm"
             crossOrigin="anonymous"
@@ -139,16 +139,16 @@ export default function LandingPage() {
                     <button
                       className="px-3 sm:px-6 py-2 sm:py-3 text-xs sm:text-base font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
                       style={{
-                        backgroundColor: "#92301a",
-                        color: "#ffffff",
+                        backgroundColor: "#ffffff",
+                        color: "#92301a",
                         border: "2px solid #92301a",
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "#7a2817"
-                        e.currentTarget.style.borderColor = "#7a2817"
+                        e.currentTarget.style.backgroundColor = "#ffffff"
+                        e.currentTarget.style.borderColor = "#ffffff"
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "#92301a"
+                        e.currentTarget.style.backgroundColor = "#ffffff"
                         e.currentTarget.style.borderColor = "#92301a"
                       }}
                       onClick={() => (window.location.href = "/medical")}
@@ -235,16 +235,16 @@ export default function LandingPage() {
                       <button
                         className="flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg w-full md:w-auto mx-auto"
                         style={{
-                          backgroundColor: "#92301a",
-                          color: "#ffffff",
+                          backgroundColor: "#ffffff",
+                          color: "#92301a",
                           border: "2px solid #92301a",
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.backgroundColor = "#7a2817"
+                          e.currentTarget.style.backgroundColor = "#ffffff"
                           e.currentTarget.style.borderColor = "#7a2817"
                         }}
                         onMouseLeave={(e) => {
-                          e.currentTarget.style.backgroundColor = "#92301a"
+                          e.currentTarget.style.backgroundColor = "#ffffff"
                           e.currentTarget.style.borderColor = "#92301a"
                         }}
                         onClick={() => (window.location.href = "/medical")}
@@ -287,7 +287,7 @@ export default function LandingPage() {
                 About Us
               </h2>
               <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-4 md:mb-6 leading-relaxed text-gray-600">
-                Founded in 2018, Hamad Co has grown from a small India-based trading company into a globally recognized
+                Hamad Co has grown from a small India-based trading company into a globally recognized
                 brand with a strong reputation for quality, trust, and reliability.
               </p>
             </GSAPAnimatedSection>
@@ -320,13 +320,13 @@ export default function LandingPage() {
                   <h3 className="text-xl sm:text-2xl font-serif font-bold text-gray-900">Message from the Founder</h3>
                   <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-gray-300">
                     <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify italic mb-4">
-                      "When I started Hamad Co in 2018, my vision was simple: to build a company that stands for trust
+                      "When I started Hamad Co, my vision was simple: to build a company that stands for trust
                       and quality while making India proud in global markets. Today, with our expanding reach and
                       growing customer base, I am proud that we are living that vision every day. Our focus will always
                       remain on innovation, excellence, and building long-term relationships with our partners
                       worldwide."
                     </p>
-                    <p className="text-gray-900 font-semibold">- Mr. Hamad Shafi, Founder</p>
+                    <p className="text-gray-900 font-semibold">- Mr. Hamad , Founder</p>
                   </div>
                 </div>
               </GSAPAnimatedSection>
@@ -506,8 +506,8 @@ export default function LandingPage() {
                     <div className="text-sm text-blue-800">Countries Served</div>
                   </div>
                   <div className="text-center p-4 bg-green-50 rounded-lg overflow-hidden">
-                    <div className="text-2xl font-bold text-green-600 mb-2">2018</div>
-                    <div className="text-sm text-green-800">Established</div>
+                    <div className="text-2xl font-bold text-green-600 mb-2">100%</div>
+                    <div className="text-sm text-green-800">Client Satisfaction</div>
                   </div>
                 </div>
               </GSAPAnimatedSection>
