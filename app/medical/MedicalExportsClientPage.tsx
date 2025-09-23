@@ -300,9 +300,10 @@ export default function MedicalExportsClientPage() {
   return (
     <div className="min-h-screen bg-background">
       <IslandNavbar />
-
+      
       {/* Hero - Updated with medical desk background */}
       <div
+      
         className="relative w-full overflow-hidden"
         style={{
           height: "80vh",
@@ -311,6 +312,7 @@ export default function MedicalExportsClientPage() {
           background: "#f8fafc",
         }}
       >
+        <br /><br />
         <FloatingShapes variant="circles" />
 
         <div className="absolute inset-0" style={{ backgroundColor: "#f8fafc" }}>
@@ -354,7 +356,7 @@ export default function MedicalExportsClientPage() {
                     className="md:w-60 md:h-18 ml-4 group-hover:scale-110 transition-transform duration-300"
                   />
             </center>
-
+            <center>
             <h1
             
               className="text-balance text-3xl md:text-4xl lg:text-5xl font-serif font-light tracking-wide animate-fade-in-up"
@@ -363,8 +365,8 @@ export default function MedicalExportsClientPage() {
                 marginBottom: "1rem",
               }}
             >
-              India’s Trusted Medical Exporters to Africa
-            </h1>
+            India’s Trusted Medical Exporters to Africa
+            </h1></center>
 
             <div className="mt-6 flex justify-center">
               <Image
@@ -384,6 +386,7 @@ export default function MedicalExportsClientPage() {
               }}
             >
               Delivering Health. Ensuring Compliance.
+              
               
             </p>
 
@@ -405,7 +408,9 @@ export default function MedicalExportsClientPage() {
                 Request catalog
               </button>
 
-              
+              <br />
+              <br />
+              <br />
             </div>
           </div>
         </div>
