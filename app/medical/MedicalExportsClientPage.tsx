@@ -1,13 +1,10 @@
 "use client"
 
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
-import Link from "next/link"
 import IslandNavbar from "@/components/island-navbar"
 import {
-  ArrowLeft,
   BookOpen,
   FileText,
   Globe2,
@@ -30,7 +27,9 @@ import {
   Shield,
   Phone,
   Mail,
+  ArrowLeft,
 } from "lucide-react"
+import Link from "next/link"
 
 const FloatingShapes = ({ variant = "default" }: { variant?: "default" | "dots" | "lines" | "circles" }) => {
   if (variant === "dots") {
@@ -300,117 +299,102 @@ export default function MedicalExportsClientPage() {
   return (
     <div className="min-h-screen bg-background">
       <IslandNavbar />
-      
+
       {/* Hero - Updated with medical desk background */}
       <div
-      
-        className="relative w-full overflow-hidden"
+        className="relative w-full overflow-hidden bg-slate-50"
         style={{
-          height: "80vh",
-          minHeight: "500px",
-          backgroundColor: "#f8fafc",
-          background: "#f8fafc",
+          minHeight: "100vh",
+          maxHeight: "100vh",
         }}
       >
-        <br /><br />
+        <br className="hidden md:block" />
+        <br className="hidden md:block" />
         <FloatingShapes variant="circles" />
 
-        <div className="absolute inset-0" style={{ backgroundColor: "#f8fafc" }}>
+        <div className="absolute inset-0 bg-slate-50">
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 opacity-30 md:opacity-50"
             style={{
               backgroundImage: `url('/images/3d-coronavirus-vaccine.jpg')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              opacity: 0.7,
-              filter: "blur(3px)",
+              filter: "blur(1px)",
             }}
           />
-          <div
-            className="absolute inset-0"
-            style={{
-              background: "linear-gradient(135deg, rgba(248, 250, 252, 0.7) 0%, rgba(231, 243, 255, 0.5) 100%)",
-            }}
-          />
+          
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-50/90 via-blue-50/80 to-slate-100/90" />
         </div>
 
-        {/* ... existing hero content ... */}
-        <div className="relative h-full w-full flex items-center justify-center" style={{ zIndex: 10 }}>
-          <div
-            className="max-w-4xl mx-auto px-6 text-center"
-            style={{
-              backgroundColor: "rgba(255, 255, 255, 0.95)",
-              padding: "2rem",
-              borderRadius: "1rem",
-              boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-            }}
-          >
-
-            <center>
-              <Image
-                    src="/images/hpharma.png"
-                    alt="Animated hands protecting medical cross symbol"
-                    width={120}
-                    height={60}
-                    className="md:w-60 md:h-18 ml-4 group-hover:scale-110 transition-transform duration-300"
-                  />
-            </center>
-            <center>
-            <h1
-            
-              className="text-balance text-3xl md:text-4xl lg:text-5xl font-serif font-light tracking-wide animate-fade-in-up"
-              style={{
-                color: "#163764",
-                marginBottom: "1rem",
-              }}
-            >
-            India’s Trusted Medical Exporters to Africa
-            </h1></center>
-
-            <div className="mt-6 flex justify-center">
-              <Image
-                src="/images/world-health-day.gif"
-                alt="Animated tablet and medicine illustration"
-                width={80}
-                height={80}
-                className="opacity-80 hover:opacity-100 transition-opacity duration-300"
-              />
-            </div>
-            <p
-              className="text-base md:text-lg animate-fade-in-up animation-delay-200 font-serif"
-              style={{
-                color: "#0c6f53",
-                marginBottom: "1.5rem",
-                fontWeight: "600",
-              }}
-            >
-              Delivering Health. Ensuring Compliance.
+        <div
+          className="relative h-full w-full flex items-center justify-center px-4 py-8 md:py-16"
+          style={{ zIndex: 10 }}
+        >
+          <div className="w-full max-w-6xl md:max-w-7xl lg:max-w-[60%] mx-auto text-center mt-16 sm:mt-20 md:mt-8">
+            <div className="backdrop-blur-sm bg-white/80 md:bg-white/95 rounded-xl md:rounded-3xl p-4 md:p-8 lg:p-12 shadow-lg md:shadow-2xl border border-white/30 md:border-white/20">
               
               
-            </p>
+              
+              <div className="mb-4 md:mb-8">
+                <Link
+                  href="/"
+                  className="inline-flex items-center mb-6 transition-colors duration-300 hover:scale-105 transform"
+                  style={{
+                    color: "#ffffff",
+                    textDecoration: "none",
+                  }}
+                >
+                  <ArrowLeft className="mr-2 h-4 w-4" style={{ color: "#000000ff" }} />
+                  
+                </Link>
+                <Image
+                  src="/images/hpharma.png"
+                  alt="Hamadco Medical Exports Logo"
+                  width={200}
+                  height={80}
+                  className="mx-auto w-24 h-auto md:w-48 lg:w-60 transition-transform duration-300 hover:scale-105"
+                  priority
+                />
+              </div>
 
-            <p
-              className="max-w-2xl mx-auto text-pretty leading-relaxed text-sm md:text-base animate-fade-in-up animation-delay-400 text-justify"
-              style={{
-                color: "#374151",
-                marginBottom: "2rem",
-              }}
-            >
-              We are an India-based merchant export company specializing in high-quality medical pharmaceuticals products, equipment, and healthcare solutions for African markets.
-            </p>
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif font-light tracking-wide text-[#163764] mb-3 md:mb-6 animate-fade-up leading-tight px-2">
+                India's Trusted Medical Exporters to Africa
+              </h1>
 
-            <div className="flex flex-wrap items-center justify-center gap-3 animate-fade-in-up animation-delay-600">
-              <button
-                onClick={() => window.open("https://wa.me/918086890111", "_blank")}
-                className="rounded-full px-6 py-3 font-medium transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl bg-[#163764] hover:bg-[#163764]/90 text-white border-none cursor-pointer"
-              >
-                Request catalog
-              </button>
+              <div className="flex justify-center mb-3 md:mb-6">
+                <Image
+                  src="/images/world-health-day.gif"
+                  alt="Animated medical illustration"
+                  width={50}
+                  height={50}
+                  className="md:w-20 md:h-20 opacity-80 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
 
-              <br />
-              <br />
-              <br />
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-serif font-semibold text-[#0c6f53] mb-3 md:mb-6 animate-fade-up animation-delay-200">
+                Delivering Health. Ensuring Compliance.
+              </p>
+
+              <p className="max-w-2xl mx-auto text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-gray-700 mb-4 md:mb-8 animate-fade-up animation-delay-400 px-2 text-justify">
+  Trusted Merchant Exporters from India to Africa  
+  We specialize in sourcing and delivering high-quality pharmaceuticals, medical equipment, and complete healthcare solutions.  
+  With a focus on compliance, reliability, and seamless logistics, we bridge the gap between India’s finest healthcare products and Africa’s growing medical needs.  
+  Empowering hospitals, clinics, and distributors with world-class products for better patient outcomes.
+</p>
+
+
+              <div className="animate-fade-up animation-delay-600">
+                <button
+                  onClick={() => window.open("https://wa.me/918086890111", "_blank")}
+                  className="inline-flex items-center gap-2 bg-[#163764] hover:bg-[#163764]/90 text-white font-medium px-6 py-3 md:px-8 md:py-4 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm md:text-base min-h-[44px] min-w-[160px]"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.173-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
+                  </svg>
+                  Request Catalog
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -499,9 +483,7 @@ export default function MedicalExportsClientPage() {
                   healthcare needs of African countries—delivering quality pharmaceutical products with integrity and
                   efficiency while ensuring full regulatory compliance.
                 </CardDescription>
-                <div className="mt-4">
-                  
-                </div>
+                <div className="mt-4"></div>
               </CardHeader>
             </Card>
             <Card className="rounded-2xl hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 group border-l-4 border-l-[#0c6f53]">
@@ -523,9 +505,7 @@ export default function MedicalExportsClientPage() {
                   to clients across Africa. Our business is built on reliability, compliance, and strong partnerships
                   with certified Indian manufacturers in the healthcare sector.
                 </CardDescription>
-                <div className="mt-4">
-                  
-                </div>
+                <div className="mt-4"></div>
               </CardHeader>
             </Card>
           </div>
@@ -538,13 +518,10 @@ export default function MedicalExportsClientPage() {
 
         <div className="mx-auto max-w-6xl px-6 relative z-10">
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-serif font-light text-gray-900">
-              Medical Export Products
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-light text-gray-900">Medical Export Products</h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-justify leading-relaxed">
-              All medical products meet international healthcare standards and are
-              sourced from licensed Indian manufacturers with required medical
-              certifications and regulatory approvals.
+              All medical products meet international healthcare standards and are sourced from licensed Indian
+              manufacturers with required medical certifications and regulatory approvals.
             </p>
             <div className="mt-6 flex justify-center">
               <Image
@@ -579,10 +556,7 @@ export default function MedicalExportsClientPage() {
                   <CardContent className="text-sm text-gray-600">
                     <ul className="list-disc pl-5 space-y-1">
                       {cat.examples.map((ex) => (
-                        <li
-                          key={ex}
-                          className="group-hover:text-gray-700 transition-colors duration-300"
-                        >
+                        <li key={ex} className="group-hover:text-gray-700 transition-colors duration-300">
                           {ex}
                         </li>
                       ))}
@@ -631,7 +605,7 @@ export default function MedicalExportsClientPage() {
                 className="md:w-70 md:h-70 ml-4 group-hover:scale-110 transition-transform duration-300"
               />
             </center>
-            
+
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-justify leading-relaxed">
               We handle the entire medical export workflow—from sourcing to delivery—while maintaining full compliance
               with both Indian and African regulatory requirements for healthcare products.
@@ -774,7 +748,6 @@ export default function MedicalExportsClientPage() {
       {/* ===== Photo Gallery Section ===== */}
       <section className="py-16 bg-gray-100" id="gallery">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div className="overflow-hidden rounded-2xl shadow-lg">
               <img
@@ -797,8 +770,6 @@ export default function MedicalExportsClientPage() {
                 className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
-            
-            
           </div>
         </div>
       </section>
@@ -892,9 +863,7 @@ export default function MedicalExportsClientPage() {
             <p className="text-white/70 text-sm mt-4">+91-8086890111</p>
           </div>
 
-          <div className="mt-10">
-            
-          </div>
+          <div className="mt-10"></div>
         </div>
       </section>
 

@@ -15,7 +15,7 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src="/placeholder-logo.svg" alt="Hamadco logo" className="h-8 w-auto" />
+              
               <span className="text-lg font-semibold text-white" style={{ color: "#ffffff !important" }}>
                 Hamadco
               </span>

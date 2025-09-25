@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState, useCallback } from "react"
+import { useEffect, useRef, useState } from "react"
 
 interface Client {
   name: string
@@ -22,51 +22,87 @@ const clients: Client[] = [
   { name: "Industrial Seals Co", location: "South Korea", industry: "Rubber Seals", partnership: "2 years" },
 ]
 
+const MARQUEE_SPEEDS = {
+  mobile: 10, // seconds - faster on mobile
+  tablet: 25, // seconds - medium speed on tablet
+  desktop: 35, // seconds - slower on desktop for better readability
+}
+
 export default function ScrollMarquee() {
   const marqueeRef = useRef<HTMLDivElement>(null)
-  const [scrollY, setScrollY] = useState(0)
-  const animationFrameRef = useRef<number>()
+  const [currentSpeed, setCurrentSpeed] = useState(MARQUEE_SPEEDS.desktop)
 
-  const handleScroll = useCallback(() => {
-    if (animationFrameRef.current) {
-      cancelAnimationFrame(animationFrameRef.current)
+  const getMarqueeSpeed = () => {
+    if (typeof window === "undefined") return MARQUEE_SPEEDS.desktop
+
+    if (window.innerWidth < 768) {
+      return MARQUEE_SPEEDS.mobile
+    } else if (window.innerWidth < 1024) {
+      return MARQUEE_SPEEDS.tablet
+    } else {
+      return MARQUEE_SPEEDS.desktop
     }
-
-    animationFrameRef.current = requestAnimationFrame(() => {
-      setScrollY(window.scrollY)
-    })
-  }, [])
+  }
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current)
-      }
+    const updateSpeed = () => {
+      const newSpeed = getMarqueeSpeed()
+      setCurrentSpeed(newSpeed)
     }
-  }, [handleScroll])
 
-  useEffect(() => {
+    updateSpeed()
+    window.addEventListener("resize", updateSpeed)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target instanceof HTMLElement) {
+              entry.target.style.animation = `marquee ${currentSpeed}s linear infinite`
+            }
+          }
+        })
+      },
+      { threshold: 0.1 },
+    )
+
     if (marqueeRef.current) {
-      const translateX = -(scrollY * 0.3) % (marqueeRef.current.scrollWidth / 2)
-      marqueeRef.current.style.transform = `translate3d(${translateX}px, 0, 0)`
+      observer.observe(marqueeRef.current)
     }
-  }, [scrollY])
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener("resize", updateSpeed)
+    }
+  }, [currentSpeed])
 
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-gray-50 via-white to-gray-50 py-6 md:py-8 border-y border-gray-100">
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+          @keyframes marquee {
+            0% {
+              transform: translate3d(0, 0, 0);
+            }
+            100% {
+              transform: translate3d(-50%, 0, 0);
+            }
+          }
+        `,
+        }}
+      />
+
       <div className="absolute left-0 top-0 z-10 h-full w-16 md:w-32 bg-gradient-to-r from-gray-50 to-transparent" />
       <div className="absolute right-0 top-0 z-10 h-full w-16 md:w-32 bg-gradient-to-l from-gray-50 to-transparent" />
 
       <div
         ref={marqueeRef}
-        className="flex gap-6 md:gap-12 whitespace-nowrap transition-transform duration-75 ease-linear"
+        className="flex gap-6 md:gap-12 whitespace-nowrap"
         style={{
           width: "200%",
+          transform: "translate3d(0, 0, 0)",
           willChange: "transform",
-          backfaceVisibility: "hidden",
-          perspective: "1000px",
         }}
       >
         {/* First set of clients */}
