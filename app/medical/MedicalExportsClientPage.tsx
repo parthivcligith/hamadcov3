@@ -312,20 +312,20 @@ export default function MedicalExportsClientPage() {
         <br className="hidden md:block" />
         <FloatingShapes variant="circles" />
 
-        <div className="absolute inset-0 bg-slate-50">
-          <div
-            className="absolute inset-0 opacity-30 md:opacity-50"
-            style={{
-              backgroundImage: `url('/images/3d-coronavirus-vaccine.jpg')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              filter: "blur(1px)",
-            }}
-          />
-          
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-50/90 via-blue-50/80 to-slate-100/90" />
-        </div>
+      <div className="absolute inset-0">
+        <div
+          className="absolute inset-0 blur-sm"
+          style={{
+            backgroundImage: `url('/images/12345.jpeg')`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        {/* Sleek professional overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-transparent" />
+      </div>
+
 
         <div
           className="relative h-full w-full flex items-center justify-center px-4 py-8 md:py-16"
@@ -358,10 +358,9 @@ export default function MedicalExportsClientPage() {
                 />
               </div>
 
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-light tracking-wide text-[#163764] mb-3 md:mb-6 animate-fade-up leading-tight px-2">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif font-light tracking-wide text-[#163764] mb-3 md:mb-6 animate-fade-up leading-tight px-2">
                 India's Trusted Medical Exporters to Africa
               </h1>
-
 
               <div className="flex justify-center mb-3 md:mb-6">
                 <Image
